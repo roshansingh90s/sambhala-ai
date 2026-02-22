@@ -17,9 +17,9 @@ export async function POST(req: Request) {
     system: systemPrompt,
     messages: await convertToModelMessages(messages),
 
-    //TODO TASK 2 - Tool Calling
-    tools,            // Uncomment to enable tool calling
-    maxSteps: 5,      // Allow multi-step tool use (model calls tool → gets result → responds)
+    // TODO TASK 2 - Tool Calling
+    tools,            
+    maxSteps: 5,      
   });
 
   return result.toUIMessageStreamResponse();
